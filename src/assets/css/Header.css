@@ -1,0 +1,57 @@
+/* Background cho header */
+.bg-custom-header {
+  background-image: url('https://your-image-url.jpg');  /* Đặt đường dẫn hình ảnh cho background */
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Thêm hiệu ứng hover cho các mục menu */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #0c6dce !important;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Cải thiện các phần tử trong navbar */
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(159, 5, 5, 0.8);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(227, 14, 14);
+}
+
+/* Cải thiện logo */
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #cc0c0c;
+  text-transform: uppercase;
+}
+
+/* Chỉnh sửa nút hamburger (menu mobile) */
+.navbar-toggler-icon {
+  background-color: #b40303b0;
+}
+
+/* Thêm một số hiệu ứng khi người dùng cuộn trang */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Điều chỉnh khoảng cách và căn chỉnh các mục navbar */
+.navbar-collapse {
+  justify-content: flex-end;
+}
