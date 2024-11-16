@@ -1,58 +1,67 @@
-// src/components/Header.js
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Kết nối với Bootstrap
-import '../assets/css/Header.css';  // Import CSS cho Header
+import React from 'react';  
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import 'bootstrap-icons/font/bootstrap-icons.css';  
+import '../assets/css/Header.css';  
 
-const Header = () => {
-    return (
-        <header className="sticky-top bg-success py-3">
-            <nav className="navbar navbar-expand-lg navbar-light">
-                <div className="container">
-                    {/* Logo */}
-                    <a className="navbar-brand text-white" href="/">
-                        Hotel Booking
-                    </a>
+const Header = () => {  
+    return (  
+        <header className="header bg-primary text-white">  
+            <div className="container d-flex justify-content-between align-items-center py-2">  
+                <div className="d-flex align-items-center">  
+                    <div className="h6 mb-0 fw-bold">Booking.com</div>  
+                    <a href="/" className="text-white mx-3">Home</a>  
+                    <a href="/roomlist" className="text-white mx-3">RoomList</a>  
+                    <a href="/booking" className="text-white mx-3">Booking</a>  
+                    <a href="/news" className="text-white mx-3">News</a>  
+                    <a href="/about" className="text-white mx-3">About</a>  
+                    <a href="/contact" className="text-white mx-3">Contact</a>  
+                </div>  
+                <div className="d-flex align-items-center">  
+                    <span className="me-2">VND</span>  
+                    <span className="mx-2">|</span>  
+                    <a href="/register" className="text-white mx-2">Register</a>  
+                    <a href="/login" className="text-white mx-2">Sign in</a>  
+                </div>  
+            </div>  
 
-                    {/* Menu Toggle Button for Mobile */}
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    {/* Navigation Links */}
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className="nav-link" href="/">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/room-list">Room List</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/booking">Booking</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/about">About</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/contact">Contact</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/news">News</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    );
-};
+            {/* Search Bar Section */}  
+            <div className="search-bar py-3">  
+                <div className="container">  
+                    <div className="d-flex justify-content-center align-items-center">  
+                        <div className="input-group me-2">  
+                            <input  
+                                type="text"  
+                                className="form-control"  
+                                placeholder="Destination"  
+                                aria-label="Destination"  
+                                id="destination"  
+                            />  
+                            <button className="btn btn-outline-secondary" type="button">  
+                                <span>&times;</span>  
+                            </button>  
+                        </div>  
+                        <div className="input-group me-2">  
+                            <span className="input-group-text">Check-in date</span>  
+                            <input type="date" className="form-control" />  
+                        </div>  
+                        <div className="input-group me-2">  
+                            <span className="input-group-text">Check-out date</span>  
+                            <input type="date" className="form-control" />  
+                        </div>  
+                        <div className="input-group me-2">  
+                            <span className="input-group-text">Adults</span>  
+                            <input type="number" className="form-control" defaultValue="2" />  
+                            <span className="input-group-text">Children</span>  
+                            <input type="number" className="form-control" defaultValue="0" />  
+                            <span className="input-group-text">Rooms</span>  
+                            <input type="number" className="form-control" defaultValue="1" />  
+                        </div>  
+                        <button className="btn btn-primary">Search</button>  
+                    </div>  
+                </div>  
+            </div>  
+        </header>  
+    );  
+};  
 
 export default Header;
