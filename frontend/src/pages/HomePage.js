@@ -125,7 +125,8 @@ const HomePage = () => {
         <p>Những đối tác thanh toán đáng tin cậy của chúng tôi...</p>  
         <div className="payment-logos">  
           <img src="/images/21.jpg" alt="Payment Partner 1" />  
-          <img src="/images/22.jpg" alt="Payment Partner 2" />  /-strong/-heart:>:o:-((:-h <img src="/images/23.jpg" alt="Payment Partner 3" />
+          <img src="/images/22.jpg" alt="Payment Partner 2" />   
+          <img src="/images/23.jpg" alt="Payment Partner 3" />
           <img src="/images/21.jpg" alt="Payment Partner 1" />  
           <img src="/images/22.jpg" alt="Payment Partner 2" />  
           <img src="/images/23.jpg" alt="Payment Partner 3" />   
