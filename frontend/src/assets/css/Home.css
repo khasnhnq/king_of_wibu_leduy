@@ -180,30 +180,105 @@ body {
   background-color: #0056b3;
 }
 
-/* Đối tác */
+/* Cấu trúc chung cho phần đối tác */
 .partners {
-  margin: 20px 0;
-}
-
-.partners h3 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.partners-logos, .payment-logos {
   display: flex;
-  flex-wrap: wrap; /* Cho phép các logo xuống dòng nếu không đủ chỗ */
-  justify-content: space-around;
-  margin: 20px 0;
+  flex-direction: column; /* Các phần tử sẽ nằm theo chiều dọc */
+  gap: 20px; /* Khoảng cách giữa các phần */
 }
 
-.partners-logos img, .payment-logos img {
+/* Cấu trúc chung cho phần đối tác */
+.partners {
+  display: flex;
+  flex-direction: column; /* Các phần tử sẽ nằm theo chiều dọc */
+  gap: 30px; /* Khoảng cách giữa các phần */
+  font-family: Arial, sans-serif; /* Cải thiện font chữ */
+}
+
+/* Đối tác khách sạn */
+.hotel-partners {
+  display: flex;
+  gap: 30px;
+  border-top: 1px solid black;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.hotel-partners .partners-text {
+  flex: 2;
+  padding: 15px;
+  text-align: left;
+}
+
+.hotel-partners h3 {
+  font-weight: bold;
+  font-size: 32px; /* Kích thước chữ lớn hơn */
+  color: #333; /* Màu chữ tối */
+}
+
+.hotel-partners p {
+  margin: 10px 0;
+  font-size: 18px; /* Kích thước chữ lớn hơn */
+  line-height: 1.5; /* Tăng khoảng cách dòng để văn bản dễ đọc hơn */
+  color: #555; /* Màu chữ dễ nhìn */
+}
+
+.hotel-partners .partners-logos {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 10px;
+}
+
+.hotel-partners .partners-logos img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 100px; /* Thay đổi kích thước logo */
+  height: auto;
+}
+
+/* Đối tác thanh toán */
+.payment-partners {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.payment-partners .payment-text {
+  flex: 2;
+  padding: 15px;
+  text-align: left;
+}
+
+.payment-partners h3 {
+  font-weight: bold;
+  font-size: 32px; /* Kích thước chữ lớn hơn */
+  color: #333; /* Màu chữ tối */
+}
+
+.payment-partners p {
+  margin: 10px 0;
+  font-size: 18px; /* Kích thước chữ lớn hơn */
+  line-height: 1.5; /* Tăng khoảng cách dòng để văn bản dễ đọc hơn */
+  color: #555; /* Màu chữ dễ nhìn */
+}
+
+.payment-partners .payment-logos {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 10px;
+}
+
+.payment-partners .payment-logos img {
+  width: 100%;
+  object-fit: cover;
   max-width: 100px;
-  margin: 0 2px;
+  height: auto;
 }
-
-
-
 
 
 
