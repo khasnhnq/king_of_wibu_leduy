@@ -1,14 +1,232 @@
-/* CSS cho trang chủ */
+/* Căn chỉnh tổng thể */
 body {
-    background-color: #f9f9f9;
-  }
-  
-  h1 {
-    color: #28a745;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.homepage {
+  padding: 20px;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Khuyến mãi */
+.promotion {
+  margin: 20px;
+  text-align: left; /* Canh trái nội dung */
+}
+
+.promotion h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.promotion-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 300px; /* Thu nhỏ chiều rộng */
+  background-color: #f9f9f9;
+}
+
+.promotion-item span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.promotion-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.promotion-item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.promotion-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Danh mục nổi bật */
+.categories {
+  margin: 20px 0;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category {
+  width: 48%;
+  text-align: center;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.category h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.category button {
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.category button:hover {
+  background-color: #218838;
+}
+
+/* Phòng khách sạn */
+.hotel-list {
+  margin: 20px 0;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.hotel-item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left; /* Căn trái nội dung */
+}
+
+.hotel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hotel-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold; /* Đổi tên phòng thành chữ đậm */
+}
+
+.hotel-item p {
+  font-size: 14px;
+}
+
+.hotel-item .price {
+  font-weight: bold; /* In đậm giá tiền */
+  font-size: 16px;
+  color: #007bff; /* Màu sắc cho giá tiền */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Căn lề trái các ngôi sao */
+  margin: 10px 0;
+}
+
+.rating-text {
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 3px; /* Điều chỉnh vị trí của phần đánh giá */
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Căn lề phải cho số người đánh giá */
+  margin-left: 10px; /* Khoảng cách giữa sao và phần thông tin */
+}
+
+.rating-info span {
+  margin-left: 5px;
+  font-size: 12px; /* Kích thước nhỏ cho số người đánh giá */
+  color: #888; /* Màu xám cho số người đánh giá */
+}
+
+.hotel-item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hotel-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Đối tác */
+.partners {
+  margin: 20px 0;
+}
+
+.partners h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.partners-logos, .payment-logos {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các logo xuống dòng nếu không đủ chỗ */
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.partners-logos img, .payment-logos img {
+  max-width: 100px;
+  margin: 0 2px;
+}
+
+
+
+
+
+
+
+
+
+/* Điểm đến hot nhất */
+.hot-destinations {  
+  margin: 40px 0;  /* Khoảng cách trên và dưới rộng thêm */
+  text-align: center;  
+}  
+
+.destination-grid {  
+  display: grid; /* Sử dụng grid */  
+  grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột */  
+  gap: 20px; /* Khoảng cách giữa các item */  
+}  
+
+.destination-item {  
+  margin: 0; /* Gỡ bỏ margin để tránh ảnh hưởng đến cấu trúc */  
+}  
+
+.destination-item img {  
+  width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của item */  
+  border-radius: 8px; /* Làm tròn góc ảnh */  
+}
