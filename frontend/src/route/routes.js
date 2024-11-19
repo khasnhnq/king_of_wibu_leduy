@@ -9,7 +9,7 @@ import RegisterPage from '../pages/RegisterPage';
 import RoomDetailPage from '../pages/RoomDetailPage';
 import RoomListPage from '../pages/RoomListPage';
 import NewsPage from '../pages/NewsPage';
-import AuthLayout from '../components/AuthLayout';  // Import layout không có header/footer
+import AuthLayout from '../components/AuthLayout'; // Import layout không có header/footer
 
 function AppRoutes() {
   return (
@@ -22,7 +22,7 @@ function AppRoutes() {
       <Route path="/room-list" element={<RoomListPage />} />
       <Route path="/news" element={<NewsPage />} />
 
-      {/* Trang đăng nhập và đăng ký sử dụng AuthLayout */}
+      {/* Đường dẫn Login và Register sử dụng AuthLayout */}
       <Route path="/login" element={<AuthLayout><LoginPage /></AuthLayout>} />
       <Route path="/register" element={<AuthLayout><RegisterPage /></AuthLayout>} />
     </Routes>
