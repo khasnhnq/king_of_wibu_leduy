@@ -1,60 +1,24 @@
+// Cài đặt express nếu chưa cài
 const express = require('express');
 const app = express();
-const port = 5000; // Port bạn muốn chạy server
+const port = 5000;
 
-// Middleware để xử lý dữ liệu JSON
 app.use(express.json());
 
-// API root
-app.get('/', (req, res) => {
-  res.send('Welcome to the Hotel API!');
-});
+// Giả sử có API tìm kiếm
+app.get('/api/search', (req, res) => {
+  const { destination, dates, guests } = req.query;
 
-// API lấy danh sách khách sạn
-app.get('/api/hotels', (req, res) => {
-  const hotels = [
-    { id: 1, name: 'Hotel A', location: 'Phu Quoc' },
-    { id: 2, name: 'Hotel B', location: 'Da Nang' },
-    { id: 3, name: 'Hotel C', location: 'Ha Noi' },
+  // Logic tìm kiếm ở đây, ví dụ: lọc khách sạn, phòng, v.v.
+  const results = [
+    { id: 1, name: 'Hotel A', location: destination, price: 100 },
+    { id: 2, name: 'Hotel B', location: destination, price: 200 },
+    { id: 3, name: 'Hotel C', location: destination, price: 300 }
   ];
-  res.json(hotels);
+
+  res.json(results); // Trả kết quả tìm kiếm
 });
 
-// API thêm khách sạn
-app.post('/api/hotels', (req, res) => {
-  const { name, location } = req.body;
-  if (!name || !location) {
-    return res.status(400).json({ message: 'Name and location are required' });
-  }
-  const newHotel = {
-    id: Date.now(), // Tạo ID dựa trên thời gian
-    name,
-    location,
-  };
-  // Giả lập thêm vào cơ sở dữ liệu
-  res.status(201).json(newHotel);
-});
-
-// API cập nhật thông tin khách sạn
-app.put('/api/hotels/:id', (req, res) => {
-  const { id } = req.params;
-  const { name, location } = req.body;
-  if (!name || !location) {
-    return res.status(400).json({ message: 'Name and location are required' });
-  }
-  // Giả lập cập nhật khách sạn
-  const updatedHotel = { id, name, location };
-  res.json(updatedHotel);
-});
-
-// API xóa khách sạn
-app.delete('/api/hotels/:id', (req, res) => {
-  const { id } = req.params;
-  // Giả lập xóa khách sạn
-  res.status(204).send(); // Trả về status 204 khi xóa thành công
-});
-
-// Bắt đầu server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });

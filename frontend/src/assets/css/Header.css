@@ -39,7 +39,7 @@
 }
 
 .auth-buttons a:hover {
-  background-color: #d1e7fd;
+  background-color: #f3f364;
   color: #003580;
 }
 
@@ -58,10 +58,11 @@
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .nav a:hover {
-  background-color: #eaf2fb;
+  background-color: #f3f364;
   color: #003580;
 }
 
@@ -73,21 +74,21 @@
   margin-top: 10px;
 }
 
-
-
 .middle-text p {
   font-size: 32px;
   margin-top: 5px;
-  margin-left: 5px; /* Đảm bảo chữ dưới thẳng hàng */
+  margin-left: 5px;
   font-weight: 900;
 }
 
 /* Search Section */
+/* Search Section */
 .search-section {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* Để các phần tử có thể bọc xuống dòng khi không đủ chỗ */
+  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   background-color: rgb(107, 199, 241);
   border: 2px solid white;
   border-radius: 8px;
@@ -96,7 +97,7 @@
   max-width: 900px;
   position: relative;
   z-index: 2;
-  transform: translateY(50px); /* Đẩy search box ra khỏi nền */
+  transform: translateY(50px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,12 +108,14 @@
   padding: 10px;
   font-size: 14px;
   transition: border-color 0.3s ease;
+  min-width: 150px;
 }
 
 .search-section input:hover {
   border-color: #003580;
 }
 
+/* Nút tìm kiếm */
 .search-section button {
   background-color: #003580;
   color: white;
@@ -123,38 +126,66 @@
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.2s;
   font-size: 14px;
+  width: 100%; /* Giảm chiều rộng của nút tìm kiếm để phù hợp với các ô nhập liệu */
+  max-width: 150px; /* Giới hạn chiều rộng tối đa của nút */
+  margin-top: 25px; /* Khoảng cách phía trên nút */
 }
 
 .search-section button:hover {
   background-color: #005bb5;
   transform: scale(1.05);
+} 
+
+/* Guests & Room Input Flex Container */
+.guests-room-container {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .search-section {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-/* Điều chỉnh icon */
-.nav a i,
-.auth-buttons a i {
-  margin-right: 8px; /* Khoảng cách giữa icon và text */
-  font-size: 16px; /* Kích thước icon */
+.input-container {
+  flex: 1;
+  position: relative;
 }
 
-.middle-text i {
+.input-container label {
+  font-size: 12px;
   color: #003580;
-  margin-right: 10px;
-  font-size: 20px;
 }
 
-.search-section button i {
-  margin-right: 5px;
+.input-container input {
+  width: 100%;
+  padding-right: 40px; /* Dành không gian cho dấu +, - */
 }
+
+/* Date Picker Container */
+/* Date Picker Container */
+.date-picker-container {
+  display: flex;
+  flex-direction: column; /* Đặt các phần tử theo chiều dọc */
+  gap: 5px; /* Khoảng cách giữa label và input */
+  flex: 1;
+  width: 200px; /* Bạn có thể thay đổi chiều rộng phù hợp */
+}
+
+.date-picker-container label {
+  font-size: 12px;
+  color: #003580;
+  margin-bottom: 5px; /* Khoảng cách dưới label */
+}
+
+.date-picker-container .form-control {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.date-picker-container .form-control:hover {
+  border-color: #003580;
+}
+
