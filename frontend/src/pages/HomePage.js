@@ -52,7 +52,8 @@ const HomePage = () => {
           <button>Sao chép mã</button>  
         </div>  
         <div className="promotion-item">  
-          <span>Mã: STAYQUOCTE</span>  /-strong/-heart:>:o:-((:-h <p>Giảm đến 300K khi đặt Thái Lan, Singapore, Malaysia</p>  
+          <span>Mã: STAYQUOCTE</span> 
+          <p>Giảm đến 300K khi đặt Thái Lan, Singapore, Malaysia</p>  
           <p>Giảm 3% tối đa 300K...</p>  
           <button>Sao chép mã</button>  
         </div>  
